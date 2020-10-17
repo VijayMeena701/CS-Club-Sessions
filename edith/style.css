@@ -1,0 +1,587 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color: bisque;
+    margin: 0 auto;
+    overflow-x: hidden;
+    width: 100%;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    font-family: Arial, Helvetica, sans-serif;
+}
+section{
+    width: 100%;
+    height: 100%;
+}
+
+.wrapper{
+    position: relative;
+    padding: 70px 40px;
+    background: white;
+    border-radius: 20px;
+    box-shadow: 0 5px 25px rgba(0,0,0,0.2);
+    width: 85%;
+    margin: 0 auto;
+}
+.wrapper .container h2{
+    color: #111;
+    margin-bottom: 40px;
+    line-height: 1em;
+    font-weight: 500;
+    padding-left: 20px;
+    border-left: 5px solid #e91e63;
+}
+.wrapper .container {
+   display:flex;
+   justify-content: space-between;
+   width:100%;
+}
+.wrapper .container a{
+    text-decoration: none;
+    color: #111;
+    cursor: pointer;
+}
+.wrapper .container div{
+    display: flex;
+    justify-content: space-around;
+    padding: 0 20px;
+}
+
+.inputBox{
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 auto;
+    width: 80%;
+    height: 46px;
+    margin-bottom: 25px;
+}
+.inputBox:last-child{
+    margin-bottom: 0;
+}
+.inputBox .innercontainer input{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 80%;
+    border: 1px solid #111;
+    background: transparent;
+    padding: 10px;
+    border-radius: 4px;
+    box-sizing: border-box;
+    outline: none;
+    font-size: 16px;
+    color: #111;
+    font-weight: 300;
+    margin-bottom: 10px;
+}
+.inputBox .innercontainer span{
+    position: absolute;
+    top: 1px;
+    left: 1px;
+    padding: 10px;
+    display: inline-block;
+    font-size: 16px;
+    color: #111;
+    font-weight: 300;
+    transition: 0.5s;
+}
+.inputBox .innercontainer input:invalid ~ span {
+    transform: translateY(0px) translateX(0px);
+    font-size: 16px;
+}
+
+.inputBox .innercontainer input:focus ~ span,
+.inputBox .innercontainer input:valid ~ span {
+    transform: translateY(-32px) translateX(-10px);
+    font-size: 12px;
+}
+
+.inputBox .innercontainer1 input[type="submit"] {
+    max-width: 120px;
+    background-color: #2196f2;
+    border: none;
+    font-weight: 500;
+    color: white;
+    padding: 10px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 4px;
+    
+}
+
+.hintbox{
+    display: none;
+    margin: 0 auto;
+}
+.hintbox-hint{
+    display: block;
+    word-wrap: break-word;
+    padding: 20px;
+}
+.hintbox-hint h2{
+    margin: 0px 0px 5px 0px;
+}
+.hintbox-hint p{
+    font-size: 16px;
+    padding: 5px 10px;
+}
+.hintbox.active {
+    position: fixed;
+    display: inline-block;
+    top: 10%;
+    left: 50%;
+    transform: translate(-50%, 0);
+    width: 75%;
+    height: min-content;
+    background-color: lightgray;
+    box-shadow: 5px 10px 25px rgba(0,0,0,0.5);
+    border: 1px solid #111;
+    border-radius: 8px;
+    z-index: 999;
+}
+.hintbox input{
+    display: none;
+}
+.hintbox.active input{
+    display: block;
+    position: absolute;
+    border: none;
+    background: none;
+    outline: none;
+    right: 0;
+    top: 0;
+    padding: 10px;
+    margin-right: 10px;
+    margin-top: 8px;
+}
+
+
+/* Full-width input fields */
+.modal1 input[type=text], .modal1 input[type=password] {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+}
+
+/* Set a style for all buttons */
+.modal1 button {
+  background-color: skyblue;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+}
+
+.modal1 button:hover {
+  opacity: 0.8;
+}
+
+/* Extra styles for the cancel button */
+.modal1 .cancelbtn {
+  width: auto;
+  padding: 10px 18px;
+  background-color: #f44336;
+}
+
+/* Center the image and position the close button */
+.modal1 .imgcontainer {
+  text-align: center;
+  margin: 24px 0 12px 0;
+  position: relative;
+}
+
+.modal1 img.avatar {
+  max-width: 40%;
+  border-radius: 50%;
+}
+
+.modal1 .container {
+  padding: 16px;
+}
+
+.modal1 span.psw {
+  float: right;
+  padding-top: 16px;
+}
+
+/* The Modal (background) */
+.modal1 {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+  padding-top: 60px;
+}
+
+/* Modal Content/Box */
+.modal1-content {
+  background-color: #fefefe;
+  margin: 5% auto 15% auto; /* 5% from the top, 15% from the bottom and centered */
+  border: 1px solid #888;
+  width: 80%; /* Could be more or less, depending on screen size */
+}
+
+/* The Close Button (x) */
+.modal1 .close {
+  position: absolute;
+  right: 25px;
+  top: 0;
+  color: #000;
+  font-size: 35px;
+  font-weight: bold;
+}
+
+.modal1 .close:hover,
+.modal1 .close:focus {
+  color: red;
+  cursor: pointer;
+}
+
+/* Add Zoom Animation */
+.modal1 .animate {
+  -webkit-animation: animatezoom 0.6s;
+  animation: animatezoom 0.6s
+}
+
+@-webkit-keyframes animatezoom {
+  from {-webkit-transform: scale(0)} 
+  to {-webkit-transform: scale(1)}
+}
+  
+@keyframes animatezoom {
+  from {transform: scale(0)} 
+  to {transform: scale(1)}
+}
+
+/* Change styles for span and cancel button on extra small screens */
+@media screen and (max-width: 720px) {
+    .inputBox{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        height: 150px;
+    }
+    .inputBox .innercontainer input {
+        width: 100%;
+    }
+    .modal1 span.psw {
+        display: block;
+     float: none;
+  }
+  .modal1 .cancelbtn {
+     width: 100%;
+  }
+}
+
+
+
+
+
+.container5 input[type=text], .container5 input[type=password] {
+    width: 100%;
+    padding: 15px;
+    margin: 5px 0 22px 0;
+    display: inline-block;
+    border: none;
+    background: #f1f1f1;
+  }
+  
+  /* Add a background color when the inputs get focus */
+  .modal2 input[type=text]:focus, .modal2 input[type=password]:focus {
+    background-color: #ddd;
+    outline: none;
+  }
+  
+  /* Set a style for all buttons */
+  .modal2 button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+    opacity: 0.9;
+  }
+  
+  .modal2 button:hover {
+    opacity:1;
+  }
+  
+  /* Extra styles for the cancel button */
+  .modal2 .cancelbtn1 {
+    padding: 14px 20px;
+    background-color: #f44336;
+  }
+  
+  /* Float cancel and signup buttons and add an equal width */
+  .modal2 .cancelbtn1, .modal2 .signupbtn {
+    float: left;
+    width: 50%;
+  }
+  
+  /* Add padding to container elements */
+  .modal2 .container5 {
+    padding: 16px;
+  }
+  
+  /* The Modal (background) */
+  .modal2 {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: #474e5d;
+    padding-top: 50px;
+  }
+  
+  /* Modal Content/Box */
+  .modal2-content {
+    background-color: #fefefe;
+    margin: 5% auto 15% auto; /* 5% from the top, 15% from the bottom and centered */
+    border: 1px solid #888;
+    width: 80%; /* Could be more or less, depending on screen size */
+  }
+  
+  /* Style the horizontal ruler */
+  .modal2 hr {
+    border: 1px solid #f1f1f1;
+    margin-bottom: 25px;
+  }
+   
+  /* The Close Button (x) */
+  .modal2 .close2 {
+    position: absolute;
+    right: 35px;
+    top: 15px;
+    font-size: 40px;
+    font-weight: bold;
+    color: #f1f1f1;
+  }
+  
+  .modal2 .close2:hover,
+  .modal2 .close2:focus {
+    color: #f44336;
+    cursor: pointer;
+  }
+  
+  /* Clear floats */
+  .modal2 .clearfix::after {
+    content: "";
+    clear: both;
+    display: table;
+  }
+  
+  /* Change styles for cancel button and signup button on extra small screens */
+  @media screen and (max-width: 300px) {
+    .modal2 .cancelbtn1, .modal2 .signupbtn {
+       width: 100%;
+    }
+  }
+
+
+
+  .footer-main-div{
+    width: 100%;
+    height: auto;
+    margin: auto;
+    background: rgba(0, 0, 0, 0.65);
+    border-radius: 15px 15px 0 0;
+    padding: 20px 0;
+}
+/* Footer social icons edits */
+.footer-main-div .footer-social-icons{
+    width: 100%;
+    height: auto;
+    margin: auto;
+}
+.footer-main-div .footer-social-icons ul{
+   margin: 0;
+   padding: 0;
+   text-align: center;
+}
+.footer-main-div .footer-social-icons ul li{
+    display: inline-block;
+   width: 50px;
+   height: 50px;
+   margin: 2% 2%;
+   background: #669900;
+   border-radius: 100%;
+   cursor: pointer;
+   transition: 0.3s;
+}
+.footer-main-div .footer-social-icons ul li a{
+       color: #272727;
+       font-size: 25px;
+   }
+.footer-main-div .footer-social-icons ul li a i{
+       line-height: 50px;
+   }
+.footer-main-div .footer-social-icons ul li:hover{
+   transform: scale(1.3);
+   background: rgba(0, 77, 128, 0.4);
+   box-shadow: 10px 10px 11px rgba(0, 0, 0, 0.7);
+   border-radius: 10px;
+   transition: 0.3s;
+}
+.footer-main-div .footer-social-icons ul li a.facebook:hover{
+   color: rgba(59,89,153,0.6);
+}
+.footer-main-div .footer-social-icons ul li a.twitter:hover{
+   color: rgba(29,161,242,0.6);
+}
+.footer-main-div .footer-social-icons ul li a.instagram:hover{
+   color: rgba(228,64,95,0.6);
+}
+.footer-main-div .footer-social-icons ul li a.snapchat:hover{
+   color: rgba(255,252,0,0.6);
+}
+.footer-main-div .footer-social-icons ul li a.quora:hover{
+   color: rgba(185,43,39,0.6);
+}
+.footer-main-div .footer-social-icons ul li a.linked-in:hover{
+   color: rgba(0,119,181,0.6);
+}
+.footer-main-div .footer-social-icons ul li a.reddit:hover{
+   color: rgba(255,87,1,0.6);
+}
+.footer-main-div .footer-social-icons ul li a.whatsapp:hover{
+   color: rgba(37,211,102,0.6);
+}
+.footer-main-div .footer-social-icons ul li a.youtube:hover{
+   color: rgba(210,48,43,0.6);
+}
+/*############ Footer menu one edits ######*/
+.footer-main-div .footer-menu-one{
+   width: 100%;
+   height: auto;
+   margin: auto;
+}
+.change-icon > .fa + .fa,
+.change-icon:hover > .fa {
+   display: none;
+}
+.change-icon:hover > .fa + .fa {
+   display: block;
+   list-style: none;
+   text-decoration: none;
+   transform: scale(3);
+   color: aqua;
+}
+.footer-main-div .footer-menu-one ul{
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    display: block;
+}
+.footer-main-div .footer-menu-one ul li{
+    display: inline-block;
+    margin: 2% 2%;
+    width: 130px;
+    border-radius: 100%;
+    cursor: pointer;
+}
+#icons_nested{
+        font-family: arial;
+        color: #fbe;
+        font-size: 16px;
+        font-weight: 600;
+        text-decoration: none;
+        text-transform: uppercase;
+}
+.footer-main-div .footer-menu-one ul li.footerhome-new{
+   display: none;
+}
+.footer-main-div .footer-menu-one ul li.footerhome-new{
+   color: aqua; 
+   transition: 0.5s;
+   transform: scale(1.4);
+}
+
+    /* Footer Menu Two edits */
+
+.footer-main-div .footer-menu-two{
+        width: 100%;
+        height: auto;
+        margin: auto;
+       margin-top: 10px;
+}
+.footer-main-div .footer-menu-two ul{
+         margin: 0;
+         padding: 0;
+         text-align: center;
+         display: block;
+}
+.footer-main-div .footer-menu-two ul li{
+         display: inline-block;
+         margin: 0 2%;
+         border-radius: 100%;
+         cursor: pointer;
+}
+.footer-main-div .footer-menu-two ul li a{
+             font-family: arial;
+             color: #fff;
+             font-size: 12px;
+             font-weight: 600;
+             text-decoration: none;
+             text-transform: uppercase;
+}
+
+/* ############Footer bottom part ############# */
+
+.footer-bottom{
+   display: flex;
+   justify-content: space-around;
+   width: 100%;
+   height: auto;
+   margin: auto;
+   background: #32cd32;
+   padding: 10px;
+}
+.footer-bottom p{
+   font-family: "Roboto Cn", sans-serif;
+   font-size: 18px;
+   text-align: center;
+   color: #ffff00;
+   letter-spacing: 1px;
+}
+.footer-bottom p a{
+   text-decoration: none;
+   color: #4d004d;
+   font-size: 18px;
+   font-weight: 700;
+   letter-spacing: 1px;
+}
+.footer-bottom h1{
+   display: block;
+   text-align: end;
+   color: #007399;
+   font-size: 15px;
+}
