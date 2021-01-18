@@ -4,7 +4,6 @@
     box-sizing: border-box;
 }
 body{
-    background-color: bisque;
     margin: 0 auto;
     overflow-x: hidden;
     width: 100%;
@@ -22,7 +21,7 @@ section{
 .wrapper{
     position: relative;
     padding: 70px 40px;
-    background: white;
+    background: rgb(255, 255, 255);
     border-radius: 20px;
     box-shadow: 0 5px 25px rgba(0,0,0,0.2);
     width: 85%;
@@ -179,7 +178,8 @@ section{
 
 /* Set a style for all buttons */
 .modal1 button {
-  background-color: skyblue;
+  background-color: #2196f2;
+  border-radius: 4px;
   color: white;
   padding: 14px 20px;
   margin: 8px 0;
@@ -196,6 +196,7 @@ section{
 .modal1 .cancelbtn {
   width: auto;
   padding: 10px 18px;
+  border-radius: 4px;
   background-color: #f44336;
 }
 
@@ -318,6 +319,7 @@ section{
   /* Set a style for all buttons */
   .modal2 button {
     background-color: #4CAF50;
+    border-radius: 4px;
     color: white;
     padding: 14px 20px;
     margin: 8px 0;
@@ -358,15 +360,15 @@ section{
     width: 100%; /* Full width */
     height: 100%; /* Full height */
     overflow: auto; /* Enable scroll if needed */
-    background-color: #474e5d;
+    background-color: rgba(0, 0, 0, 0.35);
     padding-top: 50px;
   }
   
   /* Modal Content/Box */
   .modal2-content {
     background-color: #fefefe;
+    border-radius: 4px;
     margin: 5% auto 15% auto; /* 5% from the top, 15% from the bottom and centered */
-    border: 1px solid #888;
     width: 80%; /* Could be more or less, depending on screen size */
   }
   
@@ -452,31 +454,31 @@ section{
    transition: 0.3s;
 }
 .footer-main-div .footer-social-icons ul li a.facebook:hover{
-   color: rgba(59,89,153,0.6);
+   color: rgba(185,43,39,0.6);
 }
 .footer-main-div .footer-social-icons ul li a.twitter:hover{
-   color: rgba(29,161,242,0.6);
+   color: rgba(185,43,39,0.6);
 }
 .footer-main-div .footer-social-icons ul li a.instagram:hover{
-   color: rgba(228,64,95,0.6);
+   color: rgba(185,43,39,0.6);
 }
 .footer-main-div .footer-social-icons ul li a.snapchat:hover{
-   color: rgba(255,252,0,0.6);
+   color: rgba(185,43,39,0.6);
 }
 .footer-main-div .footer-social-icons ul li a.quora:hover{
    color: rgba(185,43,39,0.6);
 }
 .footer-main-div .footer-social-icons ul li a.linked-in:hover{
-   color: rgba(0,119,181,0.6);
+   color: rgba(185,43,39,0.6);
 }
 .footer-main-div .footer-social-icons ul li a.reddit:hover{
-   color: rgba(255,87,1,0.6);
+   color: rgba(185,43,39,0.6);
 }
 .footer-main-div .footer-social-icons ul li a.whatsapp:hover{
-   color: rgba(37,211,102,0.6);
+   color: rgba(185,43,39,0.6);
 }
 .footer-main-div .footer-social-icons ul li a.youtube:hover{
-   color: rgba(210,48,43,0.6);
+   color: rgba(185,43,39,0.6);
 }
 /*############ Footer menu one edits ######*/
 .footer-main-div .footer-menu-one{
@@ -558,30 +560,22 @@ section{
 
 .footer-bottom{
    display: flex;
+   color: rgba(0, 0, 0, 0.65);
    justify-content: space-around;
    width: 100%;
    height: auto;
    margin: auto;
-   background: #32cd32;
    padding: 10px;
 }
 .footer-bottom p{
    font-family: "Roboto Cn", sans-serif;
    font-size: 18px;
    text-align: center;
-   color: #ffff00;
    letter-spacing: 1px;
 }
-.footer-bottom p a{
+.footer-bottom a{
    text-decoration: none;
-   color: #4d004d;
+   color: rgba(0, 0, 0, 0.65);
    font-size: 18px;
-   font-weight: 700;
    letter-spacing: 1px;
-}
-.footer-bottom h1{
-   display: block;
-   text-align: end;
-   color: #007399;
-   font-size: 15px;
 }
