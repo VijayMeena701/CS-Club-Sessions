@@ -1,1 +1,46 @@
-cessvcsevsv
+<html>
+   <head>
+       <script async type="text/javascript" src="./script.js"></script>
+       <link rel="stylesheet" href="./style.css">
+   </head>
+   <body>
+    <form name="calculator" class="calculator">
+       <table>
+        <tr>
+            <td colspan="4" class="title">
+               <span>CS Club IIITDM Calculator</span>
+            </td>
+         </tr>
+          <tr>
+             <td colspan="4">
+                <input type="text" name="display" id="display" disabled>
+             </td>
+          </tr>
+          <tr>
+             <td><input type="button" name="one" value="1" onclick=dis(value)></td>
+             <td><input type="button" name="two" value="2" onclick=dis(value)></td>
+             <td><input type="button" name="three" value="3" onclick=dis(value)></td>
+             <td><input type="button" class="operator" name="plus" value="+" onclick=dis(value)></td>
+          </tr>
+          <tr>
+             <td><input type="button" name="four" value="4" onclick=dis(value)></td>
+             <td><input type="button" name="five" value="5" onclick=dis(value)></td>
+             <td><input type="button" name="six" value="6" onclick=dis(value)></td>
+             <td><input type="button" class="operator" name="minus" value="-" onclick=dis(value)></td>
+          </tr>
+          <tr>
+             <td><input type="button" name="seven" value="7" onclick=dis(value)></td>
+             <td><input type="button" name="eight" value="8" onclick=dis(value)></td>
+             <td><input type="button" name="nine" value="9" onclick=dis(value)></td>
+             <td><input type="button" class="operator" name="times" value="*" onclick=dis(value)></td>
+          </tr>
+          <tr>
+             <td><input type="button" id="clear" name="clear" value="c" onclick=clr()></td>
+             <td><input type="button" name="zero" value="0" onclick=dis(value)></td>
+             <td><input type="button" name="doit" value="=" onclick=solve();></td>
+             <td><input type="button" class="operator" name="div" value="/" onclick="calculator.display.value += '/'"></td>
+          </tr>
+       </table>
+    </form>
+ </body>
+</html>
